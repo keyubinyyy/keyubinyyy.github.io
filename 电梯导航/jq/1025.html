@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.video标签有一个默认的宽高 300X150 -->
+    <!-- 通常video内部结构添加一个元素,如果单签浏览器不支持
+    video标签,内部的标签就会渲染 
+
+    属性
+    controls="boolean" 控制器
+    src 视频的地址
+    autoplay 自动播放 根据不同的浏览器一样
+    mured 静音
+    preload 音频视频是否预加载
+    poster 视频封面 以视频的第一帧作为封面
+    loop 循环
+    -->
+    <video src="https://hs.v.netease.com/2024/0924/689980245960c70e8876f4b8c1462195qt.mp4" 
+    poster preload autoplay muted controls="ture">
+        <p>当前浏览器不支持使用HTML5播放器,请更换浏览器</p>
+    </video>
+    <!-- 设置多个媒体源 兼容不同浏览器 -->
+     <video>
+        <source src="https://hs.v.netease.com/2024/0924/689980245960c70e8876f4b8c1462195qt.avi" type="video/ogg">
+        <source src="https://hs.v.netease.com/2024/0924/689980245960c70e8876f4b8c1462195qt.mp4" type="video/mp4">
+        <source src="https://hs.v.netease.com/2024/0924/689980245960c70e8876f4b8c1462195qt.av1" type="video/webM">
+     </video>
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        h3{
+            /* color: skyblue; */
+            /* background-color: palevioletred; */
+            /* margin: 0 auto; */
+            background-color: skyblue;
+            color: pink;
+            padding-left: 36%;
+            height: 100px;
+            line-height: 100%;
+            padding-top: 50px;
+            font-size: 30px;
+        }
+    </style>
+<body>
+    <script>
+        var target = new Date("2024-10-1 00:00:00")
+        setInterval(function(){
+            // console.log(Number(target))
+            // console.log(typeof target);
+
+
+
+            var today = new Date()
+
+            // 把两个时间相减
+            var ms = target - today
+            // 换算成秒
+            var s = Math.floor(ms / 1000)
+            // console.log(s);
+            // 秒换算成天数
+            var day = Math.floor(s / (24 * 60 * 60))
+            // console.log(day);
+            //不足一天的秒数
+            s = s % (24 * 60 * 60)
+            // 不足一天秒数换算成小时数
+            var hours = Math.floor(s / (60 * 60))
+            // 不足一小时的秒数
+            s = s % (60 * 60)
+            // 不足一小时的秒数换算成分钟
+            var min = Math.floor(s / 60)
+            //不足一分钟的秒数
+            s = s % 60
+            // console.log(`距离国庆还剩${day}天${hours}小时${min}分钟${s}秒`)
+            
+            // document.write(`<h3>距离国庆还剩${day}天${hours}小时${min}分钟${s}秒</h3>`)
+        
+            document.body.innerHTML = `<h3>距离国庆还剩${day}天${hours}小时${min}分钟${s}秒</h3>`
+        },1000)
+
+
+    </script>
+</body>
+
+</html>

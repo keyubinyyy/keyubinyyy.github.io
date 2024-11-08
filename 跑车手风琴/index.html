@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>手风琴效果</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    #main {
+      width: 100%;
+      height: 260px;
+      margin: 40px 20px;
+    }
+
+    .top {
+      width: 100%;
+    }
+
+    #main ul li {
+      width: 200px;
+      height: 260px;
+      float: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #main ul li div {
+      width: 100%;
+      height: 181px;
+    }
+
+    #main ul li div.des {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, .3);
+      display: none; /* 默认不显示描述 */
+    }
+
+    #main ul li div.des h4 {
+      color: #FFF;
+      font-size: 26px;
+      padding: 30px;
+      width: 120px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #main ul li div img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+  <script src="./jq/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <ul>
+      <li>
+        <div class="des">
+          <h4>法拉利488 GTB</h4>
+        </div>
+        <div style="background: url(./1.jpg) center;"></div>
+      </li>
+      <li>
+        <div class="des">
+          <h4>兰博基尼Aventador</h4>
+        </div>
+        <div style="background: url(./2.jpg) center;"></div>
+      </li>
+      <li>
+        <div class="des">
+          <h4>保时捷911</h4>
+        </div>
+        <div style="background: url(./3.jpg) center;"></div>
+      </li>
+      <li>
+        <div class="des">
+          <h4>迈凯伦720S</h4>
+        </div>
+        <div style="background: url(./4.jpg) center;"></div>
+      </li>
+      <li>
+        <div class="des">
+          <h4>布加迪Chiron</h4>
+        </div>
+        <div style="background: url(./5.jpg) center;"></div>
+      </li>
+      <li>
+        <div class="des">
+          <h4>玛莎拉蒂MC20</h4>
+        </div>
+        <div style="background: url(./6.jpg) center;"></div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#main ul li").hover(
+        function() {
+          $(this).find('.des').stop(true, true).slideDown(500);
+        },
+        function() {
+          $(this).find('.des').stop(true, true).slideUp(500);
+        }
+      );
+    });
+  </script>
+</body>
+
+</html>

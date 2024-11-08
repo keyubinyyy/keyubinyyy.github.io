@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./jq/jquery.min.js"></script>
+<style>
+    img{
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<body>
+    <div class="box">
+        <img src="./d6.jpg" alt="">
+    </div>
+    <button class="in">淡入</button>
+    <button class="out">淡出</button>
+</body>
+<script>
+    $('.out').click(function(){
+        $('img').fadeOut(2000)
+    })
+    $('.in').click(function(){
+        $('img').fadeIn(2000)
+    })
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="cav" width="300" height="300" style="border: 2px solid purple;"></canvas>
+    <script>
+        var cav=document.querySelector('#cav')
+        var ctx=cav.getContext('2d')
+        // ctx.strokeStyle='black'
+        // ctx.stroke()
+        function drawDot(x,y){
+            ctx.beginPath()
+            ctx.arc(x,y,10,0,2*Math.PI)
+            ctx.strokeStyle='blue'
+            ctx.stroke()
+            ctx.fillStyle='red'
+            ctx.fill()
+        }
+        var x = 100
+        var y = 100
+        var speedX=1
+        var speedY=2
+        setInterval(() => {
+           ctx.clearRect(0,0,300,300)
+           x+=speedX 
+           y+=speedY
+           if(x>=290||x<=10){
+            speedX=-speedX
+           } 
+           if(y>=290||y<=10){
+            speedY=-speedY
+           } 
+           drawDot(x,y)
+        }, 30);
+            // ctx.beginPath()
+            ctx.strokeStyle='black'
+            ctx.strokeRect(50, 50, 100, 50)
+            ctx.fillStyle='yellow'
+            ctx.fillRect(10, 10, 150, 80);
+    </script>
+</body>
+</html>

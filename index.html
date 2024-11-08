@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品展示</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    a {
+        /* 去除下划线 */
+        text-decoration: none;
+
+        /* 设置默认颜色 */
+        color: inherit;
+        /* 或者指定一个颜色，比如 color: #000; */
+
+        /* 去除点击时的焦点轮廓 */
+        outline: none;
+
+        /* 去除鼠标悬停时的默认颜色变化 */
+        /* 这可能会影响到可访问性，所以请谨慎使用 */
+        color: #000;
+        /* 设置一个颜色，防止悬停时变色 */
+        /* 或者使用以下样式来完全去除悬停效果 */
+        /* a:hover, a:active, a:focus { color: inherit; } */
+
+        /* 去除点击时的背景颜色变化 */
+        background-color: transparent;
+        /* 如果需要的话 */
+
+        /* 去除点击时的边框 */
+        border: none;
+        /* 如果<a>标签有边框的话 */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: #685ad3;
+    }
+
+    header {
+        border-top: 5px solid linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        color: linear-gradient(to right, #ff0, #f00);
+        background: -webkit-linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -moz-linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* Firefox 3.6-15 */
+        background: -o-linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* Opera 11.10-11.50 */
+        background: linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* 标准语法 */
+        /* background: #333; */
+        /* color: #fff; */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        /* width: 180px; */
+        display: inline;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        padding: 5px 10px;
+        background: #ddd;
+    }
+
+    nav ul li a:hover {
+        background: #ccc;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    section {
+        width: 300px;
+        margin: 20px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    footer {
+        border-top: 5px solid linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        color: linear-gradient(to right, #ff0, #f00);
+        background: -webkit-linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -moz-linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* Firefox 3.6-15 */
+        background: -o-linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* Opera 11.10-11.50 */
+        background: linear-gradient(to right, rgb(42, 125, 232), rgb(223, 50, 50));
+        /* background: #333;
+        color: #fff; */
+        text-align: center;
+        padding: 10px 0;
+        /* position: fixed; */
+        /* bottom: 0; */
+        width: 100%;
+    }
+
+    img {
+        /* max-width: 100%;
+        height: auto; */
+        width: 300px;
+        height: 170px;
+        border-radius: 4px;
+    }
+
+    .first {
+        color: orangered;
+    }
+
+    /* .second {
+        color: purple;
+    } */
+    .third {
+        color: rgb(218, 22, 74);
+    }
+</style>
+
+<body>
+    <header>
+        <h1><span class="first">Welcome</span> <span class="second">to</span> <span class="third">keyuuubi</span>
+            Portfolio</h1>
+    </header>
+    <!-- <nav>
+        <ul>
+            <li><a href="#section1">漫威轮播图</a></li>
+            <li><a href="#section2">Fresh Flower Shop</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>
+            <li><a href="#section3">Lawn Beauty</a></li>  
+        </ul>
+    </nav> -->
+    <div class="container">
+        <section id="section1">
+            <a target="_blank" href="./漫威轮播图/demo.html">
+                <h2>漫威轮播图</h2>
+                <img src="./漫威轮播图/images/shutter_1.jpg" alt="作品1图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section2">
+            <a target="_blank" href="./鲜花在线店商城/index.html">
+                <h2>Fresh Flower Shop</h2>
+                <img src="./鲜花在线店商城/static/picture/b-3.png" alt="作品2图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./草坪修理园艺服务机构响应式网页模板/index.html">
+                <h2>Lawn Beauty</h2>
+                <img src="./草坪修理园艺服务机构响应式网页模板/static/image/gr_slider_1.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./小米商城/小米商城静态页面.html">
+                <h2>小米商城</h2>
+                <img src="./小米商城/1.webp" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./跑车手风琴/index.html">
+                <h2>跑车手风琴</h2>
+                <img src="./跑车手风琴/6.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./日本动漫影视播放平台模板/index.html">
+                <h2>日本动漫影视播放平台模板</h2>
+                <img src="./日本动漫影视播放平台模板/static/image/banner.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./拼图/拼图.html">
+                <h2>拼图</h2>
+                <img src="./拼图/1.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./无缝轮播图/index.html">
+                <h2>无缝轮播图</h2>
+                <img src="./无缝轮播图/carton5.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./淘宝放大镜/index.html">
+                <h2>淘宝放大镜</h2>
+                <img src="./淘宝放大镜/images/banner5.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./淡入淡出/d6.jpg">
+                <h2>淡入淡出</h2>
+                <img src="./淡入淡出/d6.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./电梯导航/电梯导航.html">
+                <h2>电梯导航</h2>
+                <img src="./电梯导航/lift.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./倒计时/倒计时.html">
+                <h2>倒计时</h2>
+                <img src="./倒计时/show.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./画图/画图.html">
+                <h2>画图</h2>
+                <img src="./画图/1.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./商品管理系统/商品管理系统.html">
+                <h2>商品简易管理系统</h2>
+                <img src="./商品管理系统/show.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./我的歌单/我的歌单.html">
+                <h2>我的歌单</h2>
+                <img src="./我的歌单/show.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+        <section id="section3">
+            <a target="_blank" href="./学生统计表/学生就业统计表案例.html">
+                <h2>学生统计表</h2>
+                <img src="./学生统计表/show.jpg" alt="作品3图片">
+                <p></p>
+            </a>
+        </section>
+    </div>
+    <footer>
+        <p>我的作品 &copy; show keyuyyb</p>
+    </footer>
+</body>
+
+</html>
